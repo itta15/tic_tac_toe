@@ -29,28 +29,19 @@ while running:
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_1: #touche 1 qui sera change par un clic plus tard
                 game.part.turn (0,0)
-                print("a")
             if event.key == pygame.K_2: 
                 game.part.turn (1,0)
-                print("a")
             if event.key == pygame.K_3: 
                 game.part.turn (2,0)
-                print("a")
             if event.key == pygame.K_4: 
                 game.part.turn (0,1)
-                print("a")
             if event.key == pygame.K_5: 
                 game.part.turn (1,1)
-                print("a")
             if event.key == pygame.K_6: 
                 game.part.turn (2,1)
-                print("a")
             if event.key == pygame.K_7: 
                 game.part.turn (0,2)
-                print("a")
             if event.key == pygame.K_8:
                 game.part.turn (1,2)
-                print("a")
             if event.key == pygame.K_9:
                 game.part.turn (2,2)
-                print("a")
