@@ -41,10 +41,10 @@ while running:
                #    game.part.turn (2,2)
                if event.key == pygame.K_r:
                   game = Game()  
-   if pygame.mouse.get_pressed(num_buttons=3)[0]:
-         mouse_x, mouse_y = pygame.mouse.get_pos()
-         for i in range(3):
-            for j in range(3):
-               if mouse_x >= 250 + 190*j and mouse_x < 250 + 190*(j+1) and mouse_y >= 75 + 200*i and mouse_y < 75 + 200*(i+1) :
-                     game.part.turn(i,j)
+            elif event.type = pygame.MOUSEBUTTONDOWN:
+               mouse_x, mouse_y = pygame.mouse.get_pos()
+               for i in range(3):
+                  for j in range(3):
+                     if mouse_x >= 250 + 190*j and mouse_x < 250 + 190*(j+1) and mouse_y >= 75 + 200*i and mouse_y < 75 + 200*(i+1) :
+                        game.part.turn(i,j)
 
