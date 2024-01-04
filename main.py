@@ -10,13 +10,10 @@ background = pygame.image.load("assets/background.jpg")
 
 game = Game()
 
-
-running =  True
+running = True
 
 while running:
 
    screen.blit(background, (0,0)) #affiche le fond
    game.play(screen)
 
-
-   
