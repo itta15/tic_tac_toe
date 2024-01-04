@@ -16,15 +16,15 @@ menu_state="main"
 font = pygame.font.SysFont("arialblack",40)
 
 #load button images
-Jouer_img=pygame.image.load("button/Jouer.jpg").convert_alpha()
-Deux_joueurs_img=pygame.image.load("button/2 joueurs.jpg").convert_alpha()
-Debutant_img=pygame.image.load("button/Debutant.jpg").convert_alpha()
-Difficile_img=pygame.image.load("button/Difficile.jpg").convert_alpha()
-IA_img=pygame.image.load("button/IA.jpg").convert_alpha()
-Intermediaire_img=pygame.image.load("button/Intermédiaire.jpg").convert_alpha()
-Rejouer_img=pygame.image.load("button/Rejouer.jpg").convert_alpha()
-Retour_img=pygame.image.load("button/Retour.jpg").convert_alpha()
-Quitter_img=pygame.image.load("button/Quitter.jpg").convert_alpha()
+Jouer_img=pygame.image.load("button_img/Jouer.jpg").convert_alpha()
+Deux_joueurs_img=pygame.image.load("button_img/2 joueurs.jpg").convert_alpha()
+Debutant_img=pygame.image.load("button_img/Debutant.jpg").convert_alpha()
+Difficile_img=pygame.image.load("button_img/Difficile.jpg").convert_alpha()
+IA_img=pygame.image.load("button_img/IA.jpg").convert_alpha()
+Intermediaire_img=pygame.image.load("button_img/Intermédiaire.jpg").convert_alpha()
+Rejouer_img=pygame.image.load("button_img/Rejouer.jpg").convert_alpha()
+Retour_img=pygame.image.load("button_img/Retour.jpg").convert_alpha()
+Quitter_img=pygame.image.load("button_img/Quitter.jpg").convert_alpha()
 
 #create button instances
 Jouer_button = button.Button(920, 300, Jouer_img, 1)
