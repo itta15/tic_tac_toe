@@ -1,5 +1,6 @@
 import pygame
 from case import Case
+from random import choice
 
 class Partie(pygame.sprite.Sprite):
 
@@ -47,11 +48,78 @@ class Partie(pygame.sprite.Sprite):
                 self.fin = 0
 
 
+#prend en argument si l'ia est j1 ou j2
+    def turn_ia_int (self, ia_play) :
+        if ia_play == 1:
+            l=[1,2]
+        else:
+            l=[2,1]
+        print("a")
+        if self.fin == None :
+            for p in l:
+                for i in range(3):
+                    #on verifie les lignes
+                    if self.tab[i][0]== p and self.tab[i][1] == p and self.tab[i][2]==0 :
+                        self.turn (i,2)
+                        return
+                    if self.tab[i][0]== p and self.tab[i][2] == p and self.tab[i][1]==0 :
+                        self.turn (i,1)
+                        return
+                    if self.tab[i][2]== p and self.tab[i][1] == p and self.tab[i][0]==0 :
+                        self.turn (i,0)
+                        return
+                    
+                    #on verifie les colonnes
+                    if self.tab[0][i]==p and self.tab[1][i]==p and self.tab[2][i]==0 :
+                        self.turn (2,i)
+                        return
+                    if self.tab[0][i]==p and self.tab[2][i]==p and self.tab[1][i]==0 :
+                        self.turn (1,i)
+                        return
+                    if self.tab[2][i]==p and self.tab[1][i]==p and self.tab[0][i]==0 :
+                        self.turn (0,i)
+                        return
 
-    def turn_ia_diff (self):
-        print(self.fin)
+                #on verifie les diagonales
+                if self.tab[0][0]==p and self.tab[1][1] == p and self.tab[2][2]==0 :
+                    self.turn (2,2)
+                    return
+                if self.tab[2][2] == p and self.tab[1][1] == p and self.tab[0][0]==0 :
+                    self.turn (0,0)
+                    return
+                if self.tab[0][0] == p and self.tab[2][2] == p and self.tab[1][1]==0 :
+                    self.turn (1,1)
+                    return
+
+                if self.tab[0][2]==p and self.tab[1][1]==p and self.tab[2][0]==0 :
+                    self.turn (2,0)
+                    return
+                if self.tab[2][0]==p and self.tab[1][1]==p and self.tab[0][2]==0 :
+                    self.turn (0,2)
+                    return
+                if self.tab[0][2]==p and self.tab[2][0]==p and self.tab[1][1]==0 :
+                    self.turn (1,1)
+                    return
+            self.turn_ia_debutant ()
+            
+            
+            
+    def turn_ia_debutant (self) :
         if self.fin == None:
-            _,(i,j) = self.minimax(2)
+            #création de la liste des cases vides
+            est_vide=[]
+            for i in range(3) :
+                for j in range(3) :
+                    if self.tab[i][j]==0 :
+                        est_vide.append((i,j))
+            #on sélectionne au hasard une case vide où jouer
+            (i,j) = choice(est_vide)
+            self.turn(i,j)
+
+
+    def turn_ia_diff (self,ia_play):
+        if self.fin == None:
+            _,(i,j) = self.minimax(ia_play)
             self.turn (i,j)
 
 
