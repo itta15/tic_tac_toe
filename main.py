@@ -22,15 +22,15 @@ Retour_img=pygame.image.load("assets/button/Retour.jpg").convert_alpha()
 Quitter_img=pygame.image.load("assets/button/Quitter.jpg").convert_alpha()
 
 #create button instances
-Jouer_button = button.Button(920, 300, Jouer_img, 1)
-Deux_joueurs_button = button.Button(920, 400, Deux_joueurs_img, 1)
-Debutant_button = button.Button(920, 300, Debutant_img, 1)
-Difficile_button = button.Button(920, 600, Difficile_img, 1)
-IA_button = button.Button(920, 500, IA_img, 1)
-Intermediaire_button = button.Button(920, 400, Intermediaire_img, 1)
+Jouer_button = button.Button(500, 100, Jouer_img, 1)
+Deux_joueurs_button = button.Button(400, 300, Deux_joueurs_img, 1)
+Debutant_button = button.Button(200, 400, Debutant_img, 1)
+Difficile_button = button.Button(800, 400, Difficile_img, 1)
+IA_button = button.Button(600, 300, IA_img, 1)
+Intermediaire_button = button.Button(475, 400, Intermediaire_img, 1)
 Rejouer_button = button.Button(920, 300, Rejouer_img, 1)
-Retour_button = button.Button(920, 200, Retour_img, 1)
-Quitter_button = button.Button(920, 400, Quitter_img, 1)
+Retour_button = button.Button(950, 80, Retour_img, 1)
+Quitter_button = button.Button(950, 30, Quitter_img, 1)
 
 
 

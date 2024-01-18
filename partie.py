@@ -54,7 +54,6 @@ class Partie(pygame.sprite.Sprite):
             l=[1,2]
         else:
             l=[2,1]
-        print("a")
         if self.fin == None :
             for p in l:
                 for i in range(3):
@@ -121,6 +120,8 @@ class Partie(pygame.sprite.Sprite):
         if self.fin == None:
             _,(i,j) = self.minimax(ia_play)
             self.turn (i,j)
+
+
 
 
 
